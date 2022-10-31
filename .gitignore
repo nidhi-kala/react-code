@@ -1,2 +1,5 @@
 node_modules
+static-site/node_modules
+airbnb-clone/node_modules
+*/node_modules
 *DS_Store
