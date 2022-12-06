@@ -1,8 +1,25 @@
-const Form = () => {
+const Form = ({ inputText, setInputText, todos, setTodos }) => {
+  const inputTextHandler = (e) => {
+    setInputText(e.target.value);
+    console.log(e.target.value);
+  };
+  const submitTodoHandler = (e) => {
+    e.preventDefault();
+    setTodos([
+      ...todos,
+      { text: inputText, completed: false, id: Math.random() * 1000 },
+    ]);
+    setInputText("");
+  };
   return (
     <form>
-      <input type="text" className="todo-input" />
-      <button type="submit" className="todo-button">
+      <input
+        value={inputText}
+        onChange={inputTextHandler}
+        type="text"
+        className="todo-input"
+      />
+      <button onClick={submitTodoHandler} type="submit" className="todo-button">
         <i className="fa-solid fa-plus"></i>
       </button>
       <div className="select">
