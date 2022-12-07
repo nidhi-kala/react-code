@@ -1,5 +1,12 @@
 import { useState } from "react";
-const Form = ({ inputText, setInputText, todos, setTodos }) => {
+const Form = ({
+  inputText,
+  setInputText,
+  todos,
+  setTodos,
+  setStatus,
+  status,
+}) => {
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
     console.log(e.target.value);
@@ -16,6 +23,9 @@ const Form = ({ inputText, setInputText, todos, setTodos }) => {
     ]);
     setInputText("");
   };
+  const statusHandler = (e) => {
+    setStatus(e.target.value);
+  };
   return (
     <form>
       <input
@@ -28,7 +38,12 @@ const Form = ({ inputText, setInputText, todos, setTodos }) => {
         <i className="fa-solid fa-plus"></i>
       </button>
       <div className="select">
-        <select name="todos" className="filter-todo" id="">
+        <select
+          onChange={statusHandler}
+          name="todos"
+          className="filter-todo"
+          id=""
+        >
           <option value="all">All</option>
           <option value="completed">Completed</option>
           <option value="incomplete">Incomplete</option>
