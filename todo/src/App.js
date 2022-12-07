@@ -15,14 +15,14 @@ function App() {
       case "completed":
         setFilteredTodos(
           todos.filter((todo) => {
-            todo.completed === true;
+            return todo.completed === true;
           })
         );
         break;
       case "incomplete":
         setFilteredTodos(
           todos.filter((todo) => {
-            todo.completed === false;
+            return todo.completed === false;
           })
         );
         break;
