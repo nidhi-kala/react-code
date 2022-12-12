@@ -1,7 +1,7 @@
 import React from "react";
 const Song = () => {
   return (
-    <div className="song-continer">
+    <div className="song-container">
       <h1>Picture</h1>
       <h1>Song Name</h1>
       <h1>Artist</h1>
