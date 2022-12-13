@@ -1,4 +1,4 @@
-const LibrarySong = ({ songs, song, setCurrentSong, id, key }) => {
+const LibrarySong = ({ audioRef, songs, song, setCurrentSong, id, key }) => {
   const songSelectHandler = () => {
     const selectedSong = songs.filter((state) => state.id === id);
     setCurrentSong(selectedSong[0]);
