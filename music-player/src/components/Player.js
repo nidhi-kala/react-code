@@ -8,6 +8,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
+  //State
+  const [songInfo, setSongInfo] = useState({
+    currentTime: 0,
+    duration: 0,
+  });
   //Ref
   const audioRef = useRef(null);
   //EventHandler
@@ -35,11 +40,6 @@ const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
     setSongInfo({ ...songInfo, currentTime: current, duration });
   };
 
-  //State
-  const [songInfo, setSongInfo] = useState({
-    currentTime: null,
-    duration: null,
-  });
   return (
     <div className="player">
       <audio
