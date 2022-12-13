@@ -1,8 +1,12 @@
-const LibrarySong = ({ song }) => {
+const LibrarySong = ({ songs, song, setCurrentSong, id, key }) => {
+  const songSelectHandler = () => {
+    const selectedSong = songs.filter((state) => state.id === id);
+    setCurrentSong(selectedSong[0]);
+  };
   return (
-    <div className="library-song">
+    <div onClick={songSelectHandler} className="library-song">
       <img alt={song.name} src={song.cover}></img>
-      <div className="song-details">
+      <div className="song-description">
         <h3>{song.name} </h3>
         <h4>{song.artist}</h4>
       </div>

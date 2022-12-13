@@ -2,9 +2,45 @@
   position: fixed;
   top:0;
   left:0;
-  width: 20%;
+  bottom: 0;
+  width: 20rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 2rem;
+  justify-content: center;
+  box-shadow: 2px 2px 50px rgb(200, 200, 200);
+  overflow: scroll;
+  h2{
+    padding: 2rem;
+  }
 }
+
+.library-song {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  overflow-wrap: break-word;
+  cursor: pointer;
+    img {
+    border-radius: 35%;
+    width: 30%;
+  }
+  &:hover{
+    background-color: rgb(183, 210, 255);
+  }
+}
+
+.song-description{
+  padding-left: 1rem;
+  h3{
+    font-size: 1rem;
+  }
+  h4{
+    font-size: 0.7rem;
+  }
+}
+
+*{
+  scrollbar-width: thin;
+  scrollbar-color: rgb(183, 183, 183);
+}
+
