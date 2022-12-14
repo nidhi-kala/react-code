@@ -9,6 +9,9 @@
   justify-content: center;
   box-shadow: 2px 2px 50px rgb(200, 200, 200);
   overflow: scroll;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+  opacity: 0;
   h2{
     padding: 2rem;
   }
@@ -46,4 +49,11 @@
 
 .selected{
   background: rgb(195, 227, 255);
+}
+
+.active-library{
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 99;
+  background-color: rgb(237, 237, 237);
 }
