@@ -8,18 +8,15 @@ nav{
     justify-content: space-between;
     gap: 0.5rem;
     border-radius: 10%;
-    background: rgb(187, 187, 187);
+    background: rgb(230, 230, 230);
     cursor: pointer;
-    border: 2px solid rgb(65,65,65) ;
+    border: 1px solid rgb(193, 193, 193) ;
     padding: 0.5rem;
     transition: all 0.3s ease;
-    &:hover{
-      background: rgb(65,65,65);
-      color:white;
     }
+        h1 {
+          font-style: italic;
+          font-weight: 400;
+        }
   }
-  h1{
-    font-style: italic;
-    font-weight: 400;
-  }
-}
+  

@@ -22,15 +22,21 @@ function App() {
   // Event Handler
   const timeUpdateHandler = (e) => {
     const current = e.target.currentTime;
+    setSongInfo({ ...songInfo, currentTime: current });
+  };
+
+  const loadedMetadataHandler = (e) => {
     const duration = e.target.duration;
-    setSongInfo({ ...songInfo, currentTime: current, duration });
+    setSongInfo({ ...songInfo, duration: duration });
   };
   return (
     <div className="App">
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song currentSong={currentSong} />
       <Player
+        songs={songs}
         currentSong={currentSong}
+        setCurrentSong={setCurrentSong}
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
         audioRef={audioRef}
@@ -50,7 +56,7 @@ function App() {
         ref={audioRef}
         src={currentSong.audio}
         onTimeUpdate={timeUpdateHandler}
-        onLoadedMetadata={timeUpdateHandler}
+        onLoadedMetadata={loadedMetadataHandler}
       ></audio>
     </div>
   );
