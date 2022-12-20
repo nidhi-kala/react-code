@@ -1,9 +1,10 @@
+//import pages
+import AboutPage from "./pages/AboutPage";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Test</h1>
-      </header>
+      <AboutPage />
     </div>
   );
 }
