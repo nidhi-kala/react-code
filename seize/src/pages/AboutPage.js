@@ -1,11 +1,11 @@
-import About from "../components/About";
+import AboutSection from "../components/AboutSection";
 import Services from "../components/Services";
 import Faq from "../components/Faq";
 
 const AboutPage = () => {
   return (
     <>
-      <About />
+      <AboutSection />
       <Services />
       <Faq />
     </>

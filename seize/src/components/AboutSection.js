@@ -1,7 +1,9 @@
 import home1 from "../img/home1.png";
-const About = () => {
+import styled from "styled-components";
+
+const AboutSection = () => {
   return (
-    <div>
+    <About>
       <div className="description">
         <div className="title">
           <div className="hide">
@@ -20,8 +22,18 @@ const About = () => {
       <div className="image">
         <img src={home1} alt="man with camera" />
       </div>
-    </div>
+    </About>
   );
 };
 
-export default About;
+//styled component
+const About = styled.div`
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 10rem;
+  color: white;
+`;
+
+export default AboutSection;
