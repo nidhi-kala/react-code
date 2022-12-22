@@ -1,26 +1,24 @@
+import home1 from "../img/home1.png";
 const About = () => {
   return (
     <div>
       <div className="description">
         <div className="title">
           <div className="hide">
-            <h2>I'm Nidhi, a Frontend Web Developer</h2>
+            <h2> We work to make</h2>
           </div>
           <div className="hide">
-            <h2>Convert your designs</h2>
+            <h2>
+              your <span>Dreams</span>
+            </h2>
           </div>
-          <div className="hide">
-            to <span>Code</span>
-          </div>
+          <div className="hide">come true</div>
         </div>
-        <p>Let's work together</p>
-        <button>Contact</button>
+        <p>Have photography or videography ideas? Let's work together</p>
+        <button>Contact Us</button>
       </div>
       <div className="image">
-        <img
-          src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=cover&w=600&h=800&q=80"
-          alt="laptop-image"
-        />
+        <img src={home1} alt="man with camera" />
       </div>
     </div>
   );

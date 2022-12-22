@@ -1,6 +1,12 @@
 import About from "../components/About";
+import Services from "../components/Services";
 const AboutPage = () => {
-  return <About />;
+  return (
+    <>
+      <About />
+      <Services />
+    </>
+  );
 };
 
 export default AboutPage;
