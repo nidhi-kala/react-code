@@ -43,7 +43,12 @@ const Services = () => {
         </div>
       </div>
       <div className="image">
-        <img src={home2} alt="" />
+        <img
+          src={
+            "https://images.unsplash.com/photo-1534669740902-e09e38a6a29f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=cover&w=400&h=600&q=80"
+          }
+          alt=""
+        />
       </div>
     </div>
   );

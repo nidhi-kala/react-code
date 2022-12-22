@@ -8,7 +8,7 @@ box-sizing: border-box;
 }
 
 body{
-  background: #000814;
+  background: #000e24;
 }
 
 button{
@@ -18,13 +18,29 @@ button{
   padding: 1rem 2rem;
   background: transparent;
   border: 2px solid #ffd166;
-  color: white;
-  transition: all 0.3s ease;
+  color: #eaeaea;
+  transition: all 0.2s ease-in-out;
   &:hover{
     background-color: #ffd166;
-    color: white;
+    color: #000e24;
   }
 }
+
+h2{
+  font-weight: lighter;
+  font-size: 4rem;
+}
+
+h3{
+  color: #eaeaea;
+}
+
+p{
+  padding: 3rem 0rem;
+  color: #cccccc;
+  font-size: 1.4rem;
+}
+
 `;
 
 export default GlobalStyles;
