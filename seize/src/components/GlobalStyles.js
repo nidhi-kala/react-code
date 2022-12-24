@@ -9,9 +9,11 @@ box-sizing: border-box;
 
 body{
   background: #000917;
+  font-family: 'Inter', sans-serif;
 }
 
 button{
+  font-family: 'Inter', sans-serif;
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
