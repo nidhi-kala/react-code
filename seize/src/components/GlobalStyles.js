@@ -8,7 +8,7 @@ box-sizing: border-box;
 }
 
 body{
-  background: #000917;
+  background: #000d23;
   font-family: 'Inter', sans-serif;
 }
 
