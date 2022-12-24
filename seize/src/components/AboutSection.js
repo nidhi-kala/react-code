@@ -4,29 +4,34 @@ import styled from "styled-components";
 const AboutSection = () => {
   return (
     <About>
-      <div className="description">
+      <Description>
         <div className="title">
-          <div className="hide">
-            <h2> We work to make</h2>
-          </div>
-          <div className="hide">
+          <Hide>
+            <h2> Enjoy the ride, we will</h2>
+          </Hide>
+          <Hide>
             <h2>
-              your <span>Dreams</span>
+              <span>Seize the moment</span>
             </h2>
-          </div>
-          <div className="hide">come true</div>
+          </Hide>
+          <Hide>
+            <h2>for you to cherish!</h2>
+          </Hide>
         </div>
-        <p>Have photography or videography ideas? Let's work together</p>
+        <p>
+          Need a photographer or videographer? We're here for you. Let's work
+          together
+        </p>
         <button>Contact Us</button>
-      </div>
-      <div className="image">
+      </Description>
+      <Image>
         <img
           src={
-            "https://images.unsplash.com/photo-1620403724159-40363e84a155?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=cover&w=400&h=600&q=80"
+            "https://images.unsplash.com/photo-1620403724159-40363e84a155?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&w=800&q=80"
           }
           alt="man with camera"
         />
-      </div>
+      </Image>
     </About>
   );
 };
@@ -38,7 +43,28 @@ const About = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 5rem 10rem;
-  color: white;
+  color: #e5e5e5;
 `;
 
+const Description = styled.div`
+  flex: 1;
+  padding-right: 5rem;
+  h2 {
+    font-weight: lighter;
+  }
+`;
+
+const Image = styled.div`
+  flex: 1;
+  overflow: hidden;
+  img {
+    width: 100%;
+    min-height: 80vh;
+    object-fit: cover;
+  }
+`;
+
+const Hide = styled.div`
+  overflow: hidden;
+`;
 export default AboutSection;

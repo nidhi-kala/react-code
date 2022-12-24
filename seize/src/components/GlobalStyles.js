@@ -8,7 +8,7 @@ box-sizing: border-box;
 }
 
 body{
-  background: #000e24;
+  background: #000917;
 }
 
 button{
@@ -18,8 +18,8 @@ button{
   padding: 1rem 2rem;
   background: transparent;
   border: 2px solid #ffd166;
-  color: #eaeaea;
-  transition: all 0.2s ease-in-out;
+  color: #e5e5e5;
+  transition: all 0.2s ease;
   &:hover{
     background-color: #ffd166;
     color: #000e24;
@@ -34,12 +34,26 @@ h2{
 h3{
   color: #eaeaea;
 }
+h4{
+  font-weight: bold;
+  
+}
+span{
+  font-weight: bold;
+  color: #ffd166;
+}
+
+a{
+  font-size:1rem;
+}
 
 p{
   padding: 3rem 0rem;
-  color: #cccccc;
+  color: #e5e5e5;
   font-size: 1.4rem;
+  line-height: 150%;
 }
+
 
 `;
 
