@@ -1,6 +1,9 @@
-const Faq = () => {
+import styled from "styled-components";
+import { About } from "../styles";
+
+const FaqSection = () => {
   return (
-    <div className="faq">
+    <Faq>
       <h2>
         Need to know more? <span>FAQ</span>{" "}
       </h2>
@@ -13,6 +16,7 @@ const Faq = () => {
             error
           </p>
         </div>
+        <div className="faq-line"></div>
       </div>
       <div className="question">
         <h1>What will my day look like?</h1>
@@ -23,6 +27,7 @@ const Faq = () => {
             error
           </p>
         </div>
+        <div className="faq-line"></div>
       </div>
       <div className="question">
         <h1>What products do your offer?</h1>
@@ -33,6 +38,7 @@ const Faq = () => {
             error
           </p>
         </div>
+        <div className="faq-line"></div>
       </div>
       <div className="question">
         <h1>What payment methods do you accept?</h1>
@@ -43,8 +49,40 @@ const Faq = () => {
             error
           </p>
         </div>
+        <div className="faq-line"></div>
       </div>
-    </div>
+    </Faq>
   );
 };
-export default Faq;
+
+const Faq = styled(About)`
+  display: block;
+  span {
+    display: block;
+  }
+
+  h2 {
+    font-weight: lighter;
+    padding-bottom: 2rem;
+  }
+
+  .faq-line {
+    background-color: #c4c4c4;
+    height: 0.2rem;
+    margin: 2rem 0rem;
+    width: 100%;
+  }
+  .question {
+    cursor: pointer;
+    padding: 3rem 0rem;
+  }
+
+  answer {
+    padding: 2rem 0rem;
+    p {
+      padding: 1rem 0rem;
+    }
+  }
+`;
+
+export default FaqSection;

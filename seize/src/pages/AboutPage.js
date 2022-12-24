@@ -1,13 +1,13 @@
 import AboutSection from "../components/AboutSection";
 import ServiceSection from "../components/ServicesSection";
-import Faq from "../components/Faq";
+import FaqSection from "../components/FaqSection";
 
 const AboutPage = () => {
   return (
     <>
       <AboutSection />
       <ServiceSection />
-      <Faq />
+      <FaqSection />
     </>
   );
 };
