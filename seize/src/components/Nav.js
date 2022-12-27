@@ -1,22 +1,29 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
     <StyledNav>
       <h1>
-        <a href="#" id="logo">
+        <Link className="link" to="/" id="logo">
           Seize
-        </a>
+        </Link>
       </h1>
       <ul>
         <li>
-          <a href="#">About Us</a>
+          <Link className="link" to="/about">
+            About Us
+          </Link>
         </li>
         <li>
-          <a href="#">Our Work</a>
+          <Link className="link" to="/work">
+            Our Work
+          </Link>
         </li>
         <li>
-          <a href="#">Contact Us</a>
+          <Link className="link" to="/contact">
+            Contact Us
+          </Link>
         </li>
       </ul>
     </StyledNav>
@@ -33,14 +40,14 @@ const StyledNav = styled.div`
   justify-content: space-between;
   background-color: #00112e;
   h1 {
-    a {
+    .link {
       color: #ffd166;
       font-family: "Courgette", cursive;
       font-size: 1.5rem;
       font-weight: lighter;
     }
   }
-  a {
+  .link {
     text-decoration: none;
     color: #ccc;
   }
