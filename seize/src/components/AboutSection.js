@@ -1,23 +1,24 @@
 import home1 from "../img/home1.png";
 import styled from "styled-components";
 import { About, Description, Hide, Image } from "../styles";
+import { motion } from "framer-motion";
 const AboutSection = () => {
   return (
     <About>
       <Description>
-        <div className="title">
+        <motion.div className="title">
           <Hide>
-            <h2> Enjoy the ride, we will</h2>
+            <motion.h2>Enjoy the ride, we will</motion.h2>
           </Hide>
           <Hide>
-            <h2>
+            <motion.h2>
               <span>Seize the moment</span>
-            </h2>
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2>for you to cherish!</h2>
+            <motion.h2>for you to cherish!</motion.h2>
           </Hide>
-        </div>
+        </motion.div>
         <p>
           Need a photographer or videographer? We're here for you. Let's work
           together

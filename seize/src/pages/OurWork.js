@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { PageAnimation } from "../animation";
 
 const OurWork = () => {
   return (
-    <Work>
+    <Work variants={PageAnimation} initial="hidden" animate="show" exit="exit">
       <Movie>
         <h2>The Wedding</h2>
         <div className="line"></div>
@@ -57,7 +58,7 @@ const OurWork = () => {
   );
 };
 
-const Work = styled.div`
+const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 3rem 5rem;
