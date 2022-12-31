@@ -10,11 +10,10 @@ const AboutSection = () => {
       <Description>
         <motion.div className="title">
           <Hide>
-            <motion.h2 variants={titleAnim}>Enjoy the ride, </motion.h2>
+            <motion.h2 variants={titleAnim}>Enjoy the ride,we will </motion.h2>
           </Hide>
           <Hide>
             <motion.h2 variants={titleAnim}>
-              we will
               <span> Seize the moment</span>
             </motion.h2>
           </Hide>
