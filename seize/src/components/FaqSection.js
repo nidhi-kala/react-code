@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { About } from "../styles";
-import { useState } from "react";
+import { AnimateSharedLayout } from "framer-motion";
 import Toggle from "./Toggle";
+import { fade } from "../animation";
 
 const FaqSection = () => {
   return (
@@ -9,59 +10,49 @@ const FaqSection = () => {
       <h2>
         Need to know more? <span>FAQ</span>{" "}
       </h2>
-      <div className="question">
-        <h1>How do I start?</h1>
-        <Toggle>
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque,
-              error
-            </p>
+      <AnimateSharedLayout type="crossfade">
+        <Toggle title="How do I start?">
+          <div className="question">
+            <div layout className="answer" variants={fade}>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Cumque, error
+              </p>
+            </div>
           </div>
         </Toggle>
-        <div className="faq-line"></div>
-      </div>
+        <Toggle title="What will my day look like?">
+          <div className="question">
+            <div className="answer">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Cumque, error
+              </p>
+            </div>
+          </div>
+        </Toggle>
+        <Toggle title="What products do your offer?">
+          <div className="question">
+            <div className="answer">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Cumque, error
+              </p>
+            </div>
+          </div>
+        </Toggle>
 
-      <div className="question">
-        <h1>What will my day look like?</h1>
-        <Toggle>
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque,
-              error
-            </p>
+        <Toggle title="What payment methods do you accept?">
+          <div className="question">
+            <div className="answer">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Cumque, error
+              </p>
+            </div>
           </div>
         </Toggle>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h1>What products do your offer?</h1>
-        <Toggle>
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque,
-              error
-            </p>
-          </div>
-        </Toggle>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h1>What payment methods do you accept?</h1>
-        <Toggle>
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque,
-              error
-            </p>
-          </div>
-        </Toggle>
-        <div className="faq-line"></div>
-      </div>
+      </AnimateSharedLayout>
     </Faq>
   );
 };
@@ -85,15 +76,15 @@ const Faq = styled(About)`
   }
   .question {
     cursor: pointer;
-    padding: 3rem 0rem;
+    padding: 1rem 0rem;
   }
 
-  answer {
-    padding: 2rem 0rem;
+  /* answer {
+    padding: 1rem 0rem;
     p {
       padding: 1rem 0rem;
     }
-  }
+  } */
 `;
 
 export default FaqSection;

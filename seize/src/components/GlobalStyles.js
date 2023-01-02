@@ -37,7 +37,7 @@ h3{
   color: #eaeaea;
 }
 h4{
-  font-weight: bold;
+  font-weight: 600;
   font-size:2rem;
   
 }
