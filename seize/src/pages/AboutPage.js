@@ -3,7 +3,7 @@ import ServiceSection from "../components/ServicesSection";
 import FaqSection from "../components/FaqSection";
 import { motion } from "framer-motion";
 import { PageAnimation } from "../animation";
-
+import ScrollTop from "../components/ScrollTop";
 const AboutPage = () => {
   return (
     <motion.div
@@ -15,6 +15,7 @@ const AboutPage = () => {
       <AboutSection />
       <ServiceSection />
       <FaqSection />
+      <ScrollTop />
     </motion.div>
   );
 };

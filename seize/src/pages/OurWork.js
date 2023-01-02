@@ -8,7 +8,7 @@ import {
   slider,
   sliderContainer,
 } from "../animation";
-
+import ScrollTop from "../components/ScrollTop";
 import { useScroll } from "../components/useScroll";
 
 const OurWork = () => {
@@ -80,6 +80,7 @@ const OurWork = () => {
           </Hide>
         </a>
       </Movie>
+      <ScrollTop />
     </Work>
   );
 };
