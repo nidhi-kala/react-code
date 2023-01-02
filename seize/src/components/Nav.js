@@ -42,6 +42,14 @@ const StyledNav = styled.div`
   position: sticky;
   top: 0;
   z-index: 10;
+
+  @media (max-width: 767px) {
+    //display: none;
+  }
+
+  /* Media Query for Tablets Ipads portrait mode */
+  @media (min-width: 768px) and (max-width: 1024px) {
+  }
   h1 {
     .link {
       color: #ffd166;

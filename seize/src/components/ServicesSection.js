@@ -69,21 +69,33 @@ const Service = styled(About)`
     width: 70%;
     padding: 2rem 0rem 4rem 0rem;
   }
+  @media (max-width: 767px) {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  /* Media Query for Tablets Ipads portrait mode */
 `;
 const Cards = styled.div`
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; */
-  @media (max-width: 1300px) {
+  grid-template-columns: repeat(2, auto);
+
+  @media (max-width: 767px) {
+    display: block;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 1rem auto;
+    margin: auto atuo;
+    text-align: center;
+    overflow-x: hidden;
   }
 `;
 const Card = styled.div`
-  flex-basis: 20rem;
+  flex-basis: auto;
   .icon {
     display: flex;
     align-items: center;
@@ -92,6 +104,8 @@ const Card = styled.div`
       background: white;
       color: black;
       padding: 1rem;
+    }
+    @media (max-width: 767px) {
     }
   }
 `;

@@ -9,6 +9,21 @@ export const About = styled(motion.div)`
   padding: 3rem 5rem;
   color: #e5e5e5;
   z-index: 2;
+
+  @media (max-width: 767px) {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  /* Media Query for Tablets Ipads portrait mode */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    overflow-x: hidden;
+  }
 `;
 
 export const Description = styled.div`
@@ -19,6 +34,21 @@ export const Description = styled.div`
     font-weight: lighter;
   }
   z-index: 2;
+  @media (max-width: 767px) {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    overflow-x: hidden;
+    button {
+      margin-bottom: 2rem;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    overflow-x: hidden;
+    button {
+      margin-bottom: 3rem;
+    }
+  }
 `;
 
 export const Image = styled.div`

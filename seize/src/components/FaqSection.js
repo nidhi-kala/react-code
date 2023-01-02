@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { About } from "../styles";
-import { AnimateSharedLayout } from "framer-motion";
+import { LayoutGroup } from "framer-motion";
 import Toggle from "./Toggle";
 import { fade, scrollReveal } from "../animation";
 import { useScroll } from "./useScroll";
@@ -11,7 +11,7 @@ const FaqSection = () => {
       <h2>
         Need to know more? <span>FAQ</span>{" "}
       </h2>
-      <AnimateSharedLayout type="crossfade">
+      <LayoutGroup type="crossfade">
         <Toggle title="How do I start?">
           <div className="question">
             <div layout className="answer" variants={fade}>
@@ -53,7 +53,7 @@ const FaqSection = () => {
             </div>
           </div>
         </Toggle>
-      </AnimateSharedLayout>
+      </LayoutGroup>
     </Faq>
   );
 };
