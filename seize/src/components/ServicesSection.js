@@ -4,10 +4,13 @@ import diaphragm from "../img/diaphragm.svg";
 import money from "../img/money.svg";
 import teamwork from "../img/teamwork.svg";
 import { About, Description, Hide, Image } from "../styles";
+import { fade } from "../animation";
+import { useScroll } from "./useScroll";
 
 const ServiceSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <Service>
+    <Service variants={fade} animate={controls} ref={element}>
       <Description>
         <h2>
           High <span>quality</span>
