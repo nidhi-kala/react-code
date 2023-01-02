@@ -89,7 +89,7 @@ const Cards = styled.div`
     justify-content: center;
     align-items: center;
     padding: 1rem auto;
-    margin: auto atuo;
+    margin: auto auto;
     text-align: center;
     overflow-x: hidden;
   }

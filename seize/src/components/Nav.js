@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 const Nav = () => {
+  const { pathname } = useLocation();
   return (
     <StyledNav>
       <h1>
@@ -14,16 +16,31 @@ const Nav = () => {
           <Link className="link" to="/about">
             About Us
           </Link>
+          <Line
+            transition={{ duration: 0.5 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/about" ? "30%" : "0%" }}
+          />
         </li>
         <li>
           <Link className="link" to="/work">
             Our Work
           </Link>
+          <Line
+            transition={{ duration: 0.5 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/work" ? "30%" : "0%" }}
+          />
         </li>
         <li>
           <Link className="link" to="/contact">
             Contact Us
           </Link>
+          <Line
+            transition={{ duration: 0.5 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/contact" ? "30%" : "0%" }}
+          />
         </li>
       </ul>
     </StyledNav>
@@ -44,7 +61,21 @@ const StyledNav = styled.div`
   z-index: 10;
 
   @media (max-width: 767px) {
-    //display: none;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    ul {
+      padding: 1rem 2rem;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      li {
+        padding: 0;
+      }
+    }
+    #logo {
+      display: inline-block;
+      padding: 1rem;
+    }
   }
 
   /* Media Query for Tablets Ipads portrait mode */
@@ -72,6 +103,15 @@ const StyledNav = styled.div`
     padding-left: 8rem;
     position: relative;
   }
+`;
+
+const Line = styled(motion.div)`
+  height: 0.3rem;
+  background: #ffd166;
+  width: 0%;
+  position: absolute;
+  bottom: -80%;
+  left: 25%;
 `;
 
 export default Nav;
