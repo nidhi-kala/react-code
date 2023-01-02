@@ -1,20 +1,26 @@
 import styled from "styled-components";
 import { About } from "../styles";
+import { useState } from "react";
 
 const FaqSection = () => {
+  const [faqToggle, setFaqToggle] = useState(false);
+
   return (
     <Faq>
       <h2>
         Need to know more? <span>FAQ</span>{" "}
       </h2>
-      <div className="question">
+
+      <div className="question" onClick={() => setFaqToggle(!faqToggle)}>
         <h1>How do I start?</h1>
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque,
-            error
-          </p>
+          {faqToggle && (
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque,
+              error
+            </p>
+          )}
         </div>
         <div className="faq-line"></div>
       </div>
