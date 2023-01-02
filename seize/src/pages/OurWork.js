@@ -101,6 +101,9 @@ const Movie = styled.div`
     height: 70vh;
     object-fit: cover;
   }
+  h2 {
+    color: #e2e2e2;
+  }
 `;
 
 const Hide = styled.div`
