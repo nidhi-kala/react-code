@@ -30,7 +30,7 @@ const ServiceSection = () => {
           <Card>
             <div className="icon">
               <img src={money} alt="" />
-              <h3>Cost-effective</h3>
+              <h3>Economical</h3>
             </div>
             <p>Lorem ipsum dolor sit amet.</p>
           </Card>
@@ -67,12 +67,18 @@ const Service = styled(About)`
     padding: 2rem 0rem 4rem 0rem;
   }
 `;
-
 const Cards = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; */
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
-
 const Card = styled.div`
   flex-basis: 20rem;
   .icon {
@@ -80,8 +86,8 @@ const Card = styled.div`
     align-items: center;
     h3 {
       margin-left: 1rem;
-      background: #e7e7e7;
-      color: #000917;
+      background: white;
+      color: black;
       padding: 1rem;
     }
   }
