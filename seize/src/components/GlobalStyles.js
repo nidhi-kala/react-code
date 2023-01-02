@@ -10,6 +10,7 @@ box-sizing: border-box;
 body{
   background: #20202a;
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
 button{

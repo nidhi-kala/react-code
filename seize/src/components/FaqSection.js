@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { About } from "../styles";
 import { AnimateSharedLayout } from "framer-motion";
 import Toggle from "./Toggle";
-import { fade } from "../animation";
+import { fade, scrollReveal } from "../animation";
 import { useScroll } from "./useScroll";
 const FaqSection = () => {
   const [element, controls] = useScroll();
   return (
-    <Faq variants={fade} animate={controls} ref={element}>
+    <Faq variants={scrollReveal} animate={controls} ref={element}>
       <h2>
         Need to know more? <span>FAQ</span>{" "}
       </h2>

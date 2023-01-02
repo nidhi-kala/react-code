@@ -39,6 +39,9 @@ const StyledNav = styled.div`
   margin: auto;
   justify-content: space-between;
   background-color: #23232d;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   h1 {
     .link {
       color: #ffd166;

@@ -9,7 +9,11 @@ import {
   sliderContainer,
 } from "../animation";
 
+import { useScroll } from "../components/useScroll";
+
 const OurWork = () => {
+  const [element, controls] = useScroll();
+  const [element2, controls2] = useScroll();
   return (
     <Work variants={PageAnimation} initial="hidden" animate="show" exit="exit">
       <motion.div variants={sliderContainer}>
@@ -37,9 +41,9 @@ const OurWork = () => {
           </Hide>
         </a>
       </Movie>
-      <Movie>
+      <Movie ref={element} variants={fade} animate={controls}>
         <h2>The Proposal</h2>
-        <div className="line" variants={lineAnim}></div>
+        <motion.div className="line" variants={lineAnim}></motion.div>
         <a
           //href="https://player.vimeo.com/video/438464723"
           href="https://vod-progressive.akamaized.net/exp=1672462776~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2692%2F17%2F438464723%2F1914425087.mp4~hmac=0e021589d8f236af6f9bc8346312448ec524da3375224af7a099d649a20612d9/vimeo-prod-skyfire-std-us/01/2692/17/438464723/1914425087.mp4"
@@ -57,9 +61,9 @@ const OurWork = () => {
           </Hide>
         </a>
       </Movie>
-      <Movie>
+      <Movie ref={element2} variants={fade} animate={controls2}>
         <h2>The Celebration</h2>
-        <div className="line" variants={lineAnim}></div>
+        <motion.div className="line" variants={lineAnim}></motion.div>
         <a
           href="https://vod-progressive.akamaized.net/exp=1672449680~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4287%2F14%2F371435410%2F1541921537.mp4~hmac=6f32cd419a8f48b9c222f68e1c814d75483dabbd4d8ba890713c57571a4ed41b/vimeo-prod-skyfire-std-us/01/4287/14/371435410/1541921537.mp4"
           target="_blank"
@@ -89,7 +93,7 @@ const Work = styled(motion.div)`
   }
 `;
 
-const Movie = styled.div`
+const Movie = styled(motion.div)`
   padding-bottom: 5rem;
   .line {
     height: 0.5rem;
