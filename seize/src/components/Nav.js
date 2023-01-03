@@ -111,7 +111,10 @@ const Line = styled(motion.div)`
   width: 0%;
   position: absolute;
   bottom: -80%;
-  left: 25%;
+  left: 60%;
+  @media (max-width: 767px) {
+    left: 25%;
+  }
 `;
 
 export default Nav;
