@@ -111,7 +111,7 @@ const Line = styled(motion.div)`
   width: 0%;
   position: absolute;
   bottom: -80%;
-  left: 60%;
+  left: 65%;
   @media (max-width: 767px) {
     left: 25%;
   }
